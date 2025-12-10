@@ -1,53 +1,105 @@
-style.cssbody {
+body {
   font-family: Arial, sans-serif;
+  /* Define a fonte padrão do site */
+
   background: #1a1a1a;
+  /* Cor de fundo escura */
+
   color: #fff;
+  /* Cor do texto */
+
   padding: 20px;
+  /* Espaçamento interno para afastar o conteúdo das bordas */
 }
 
 h1 {
   text-align: center;
+  /* Centraliza o título principal */
 }
 
 .container {
   max-width: 800px;
+  /* Limite máximo de largura do conteúdo */
+
   margin: auto;
+  /* Centraliza a caixa automaticamente */
+
   background: #2a2a2a;
+  /* Fundo cinza escuro */
+
   padding: 20px;
+  /* Espaçamento interno */
+
   border-radius: 10px;
+  /* Borda arredondada da caixa */
 }
 
 input, select {
   width: 100%;
+  /* Campos ocupam toda a largura disponível */
+
   padding: 10px;
+  /* Espaçamento interno (altura) */
+
   margin: 8px 0;
+  /* Espaço entre os campos */
+
   border-radius: 5px;
+  /* Bordas arredondadas */
+
   border: none;
+  /* Remove bordas padrão */
 }
 
 button {
   width: 100%;
+  /* Botão ocupa a largura completa */
+
   padding: 12px;
+  /* Aumenta a área clicável do botão */
+
   margin-top: 10px;
+  /* Espaço acima do botão */
+
   background: #4caf50;
+  /* Cor verde do botão */
+
   border: none;
+  /* Remove borda padrão */
+
   border-radius: 5px;
+  /* Bordas arredondadas */
+
   cursor: pointer;
+  /* Cursor de mão ao passar no botão */
+
   color: #fff;
+  /* Cor do texto */
+
   font-size: 16px;
+  /* Tamanho da fonte */
 }
 
 table {
   width: 100%;
+  /* Tabela ocupa toda a largura */
+
   margin-top: 20px;
+  /* Espaço acima da tabela */
+
   border-collapse: collapse;
+  /* Remove espaços entre bordas das células */
 }
 
 table, th, td {
   border: 1px solid #555;
+  /* Borda fina e cinza ao redor da tabela e das células */
 }
 
 th, td {
   padding: 10px;
+  /* Espaçamento interno para as células */
+
   text-align: left;
+  /* Texto alinhado à esquerda */
 }
