@@ -1,59 +1,110 @@
 <!DOCTYPE html>
+<!-- Declara que o documento usa HTML5 -->
+
 <html lang="pt-BR">
+<!-- Define o idioma principal da página como Português do Brasil -->
+
 <head>
+  <!-- Início da seção de configurações e metadados -->
+
   <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres como UTF-8 (suporta acentos) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Faz o site se ajustar corretamente em celulares, deixando responsivo -->
+
   <title>Bem-vindo</title>
+  <!-- Título que aparece na aba do navegador -->
+
   <style>
+    /* Estilos CSS que controlam o visual da página */
+
     body {
+      /* Define fonte padrão do site */
       font-family: Arial, sans-serif;
+
+      /* Cor de fundo escura */
       background: #1a1a1a;
+
+      /* Cor do texto principal */
       color: #fff;
+
+      /* Centraliza o conteúdo tanto horizontal quanto verticalmente */
       display: flex;
       justify-content: center;
       align-items: center;
+
+      /* Faz o body ocupar 100% da altura da tela */
       height: 100vh;
+
+      /* Remove margens padrão do navegador */
       margin: 0;
+
+      /* Centraliza texto dentro dos elementos */
       text-align: center;
     }
 
     .box {
-      background: #2a2a2a;
-      padding: 40px;
-      border-radius: 10px;
+      /* Caixa central onde fica o conteúdo */
+
+      background: #2a2a2a; /* Cor de fundo da caixa */
+      padding: 40px; /* Espaçamento interno */
+      border-radius: 10px; /* Arredonda as bordas */
+      
+      /* Sombra para destacar a caixa do fundo */
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      width: 350px;
+
+      width: 350px; /* Largura fixa da caixa */
     }
 
     h1 {
       margin-bottom: 10px;
+      /* Espaço embaixo do título */
     }
 
     p {
       margin-bottom: 25px;
+      /* Espaço abaixo do texto */
       font-size: 16px;
+      /* Tamanho da fonte do parágrafo */
     }
 
     a {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #4caf50;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
+      /* Estilos do botão/link */
+
+      display: inline-block; /* Permite padding controlado */
+      padding: 12px 20px; /* Tamanho do botão */
+      background: #4caf50; /* Cor verde do botão */
+
+      color: #fff; /* Cor do texto */
+      text-decoration: none; /* Remove o sublinhado */
+
+      border-radius: 5px; /* Bordas arredondadas */
+      font-size: 16px; /* Tamanho da fonte */
     }
 
     a:hover {
       opacity: 0.9;
+      /* Efeito ao passar o mouse: deixa o botão levemente mais escuro */
     }
   </style>
 </head>
+
 <body>
+  <!-- Início do conteúdo visível -->
+
   <div class="box">
+    <!-- Caixa centralizada onde ficam os elementos da página -->
+
     <h1>Bem-vindo!</h1>
+    <!-- Título principal exibido na tela -->
+
     <p>Sistema de Inventário de Móveis</p>
+    <!-- Texto descritivo abaixo do título -->
+
     <a href="login.html">Entrar</a>
+    <!-- Botão que leva o usuário para a página de login -->
   </div>
 </body>
+
 </html>
