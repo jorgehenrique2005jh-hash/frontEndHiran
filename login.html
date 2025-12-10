@@ -1,87 +1,141 @@
 <!DOCTYPE html>
+<!-- Declara que o documento usa HTML5 -->
+
 <html lang="pt-BR">
+<!-- Define que o idioma principal do site é Português do Brasil -->
+
 <head>
+  <!-- Início da seção de metadados e configurações -->
+
   <meta charset="UTF-8" />
+  <!-- Define a codificação do texto como UTF-8 (suporta acentos) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Garante que o site fique responsivo em celulares -->
+
   <title>Login - Inventário de Móveis</title>
+  <!-- Título exibido na aba do navegador -->
+
   <style>
+    /* ----- ESTILOS CSS DA PÁGINA ----- */
+
     body {
-      font-family: Arial, sans-serif;
-      background: #1a1a1a;
-      color: #fff;
+      font-family: Arial, sans-serif; /* Fonte usada no site */
+      background: #1a1a1a;           /* Cor de fundo escura */
+      color: #fff;                    /* Cor do texto */
+      
+      /* Centraliza vertical e horizontalmente a caixa de login */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+
+      height: 100vh; /* Altura total da tela */
+      margin: 0;     /* Remove margens padrão */
     }
 
     .login-box {
-      background: #2a2a2a;
-      padding: 30px;
-      border-radius: 10px;
-      width: 350px;
+      /* Caixa principal do formulário de login */
+
+      background: #2a2a2a; /* Fundo cinza escuro */
+      padding: 30px;       /* Espaçamento interno */
+      border-radius: 10px; /* Bordas arredondadas */
+      width: 350px;        /* Largura fixa */
+
+      /* Sombra ao redor da caixa */
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 20px;
+      text-align: center;   /* Centraliza o título */
+      margin-bottom: 20px;  /* Espaçamento inferior */
     }
 
     input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-      background: #3a3a3a;
-      color: #fff;
+      /* Estilo dos campos de entrada de texto */
+
+      width: 100%;            /* Ocupa toda a largura da caixa */
+      padding: 12px;          /* Altura do campo */
+      margin: 10px 0;         /* Espaçamento entre os inputs */
+      border: none;           /* Remove bordas */
+      border-radius: 5px;     /* Bordas arredondadas */
+
+      background: #3a3a3a;    /* Fundo cinza */
+      color: #fff;            /* Cor do texto dentro do input */
     }
 
     button {
-      width: 100%;
-      padding: 12px;
-      background: #4caf50;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      color: #fff;
-      font-size: 16px;
-      margin-top: 10px;
+      /* Estilo do botão "Entrar" */
+
+      width: 100%;            /* Largura total */
+      padding: 12px;          /* Tamanho do botão */
+      background: #4caf50;    /* Cor verde */
+      border: none;           /* Sem borda */
+      border-radius: 5px;     /* Bordas arredondadas */
+      cursor: pointer;        /* Muda o cursor ao passar em cima */
+      color: #fff;            /* Texto branco */
+      font-size: 16px;        /* Tamanho da fonte */
+      margin-top: 10px;       /* Espaçamento acima do botão */
     }
 
     .erro {
-      text-align: center;
-      color: #ff4d4d;
-      margin-top: 10px;
-      display: none;
+      /* Mensagem de erro quando login é inválido */
+
+      text-align: center;  /* Centraliza o texto */
+      color: #ff4d4d;      /* Vermelho forte */
+      margin-top: 10px;    /* Espaçamento superior */
+
+      display: none;       /* Começa escondido */
     }
   </style>
 </head>
+
 <body>
+  <!-- Conteúdo visível da página -->
+
   <div class="login-box">
+    <!-- Caixa central do formulário -->
+
     <h2>Login</h2>
+    <!-- Título do formulário -->
 
     <input type="text" id="usuario" placeholder="Usuário" />
+    <!-- Campo de texto para digitar o usuário -->
+
     <input type="password" id="senha" placeholder="Senha" />
+    <!-- Campo de senha (caracteres ficam ocultos) -->
+
     <button onclick="logar()">Entrar</button>
+    <!-- Botão que chama a função logar() ao ser clicado -->
 
     <p class="erro" id="erro">Usuário ou senha incorretos!</p>
+    <!-- Mensagem de erro (aparece apenas se login falhar) -->
   </div>
 
   <script>
-    function logar() {
-      const usuario = document.getElementById('usuario').value;
-      const senha = document.getElementById('senha').value;
-      const erro = document.getElementById('erro');
+    /* ----- SCRIPT DE LOGIN ----- */
 
+    function logar() {
+      /* Função chamada quando o botão "Entrar" é clicado */
+
+      const usuario = document.getElementById('usuario').value;
+      /* Pega o valor digitado no campo "Usuário" */
+
+      const senha = document.getElementById('senha').value;
+      /* Pega o valor digitado no campo "Senha" */
+
+      const erro = document.getElementById('erro');
+      /* Seleciona o parágrafo da mensagem de erro */
+
+      /* Verifica se usuário e senha estão corretos */
       if (usuario === 'joji' && senha === '1234') {
         window.location.href = 'inventario.html';
+        /* Se estiver certo, manda o usuário para a página de inventário */
       } else {
         erro.style.display = 'block';
+        /* Se estiver errado, exibe a mensagem vermelha */
       }
     }
   </script>
+
 </body>
 </html>
