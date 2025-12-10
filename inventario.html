@@ -1,42 +1,93 @@
 <!DOCTYPE html>
+<!-- Declara que o documento é HTML5 -->
+
 <html lang="pt-BR">
+<!-- Informa que o idioma principal da página é Português do Brasil -->
+
 <head>
+  <!-- Início da seção de configurações/metadados da página -->
+
   <meta charset="UTF-8" />
+  <!-- Define que o site usa a codificação UTF-8 (suporta acentos e caracteres especiais) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ajusta o site para ficar responsivo em celulares -->
+
   <title>Inventário de Móveis</title>
+  <!-- Título que aparece na aba do navegador -->
+
   <link rel="stylesheet" href="style.css" />
+  <!-- Conecta o arquivo CSS externo responsável pelo visual da página -->
 </head>
+
 <body>
+  <!-- Início do conteúdo visível da página -->
+
   <h1>Cadastro de Inventário de Móveis</h1>
+  <!-- Título principal da página -->
+
   <div class="container">
+    <!-- Container para organizar e centralizar o conteúdo -->
+
     <h3>Adicionar Item</h3>
+    <!-- Subtítulo indicando a área de cadastro -->
 
     <input type="text" id="nome" placeholder="Nome do móvel/equipamento" />
+    <!-- Campo de texto para digitar o nome do item -->
+
     <input type="text" id="localizacao" placeholder="Localização" />
+    <!-- Campo de texto para digitar onde o item está localizado -->
 
     <select id="status">
+      <!-- Menu suspenso para escolher o status do item -->
+
       <option value="Em uso">Em uso</option>
+      <!-- Opção indicando que o item está sendo usado -->
+
       <option value="Estocado">Estocado</option>
+      <!-- Opção indicando que o item está guardado -->
+
       <option value="Quebrado">Quebrado</option>
+      <!-- Opção indicando que o item está quebrado -->
     </select>
 
     <input type="date" id="data" />
+    <!-- Campo de seleção de data para registrar a data de aquisição -->
 
     <button onclick="adicionarItem()">Cadastrar</button>
+    <!-- Botão que chama a função adicionarItem() quando clicado -->
 
     <table>
+      <!-- Início da tabela onde os itens cadastrados aparecerão -->
+
       <thead>
+        <!-- Cabeçalho da tabela (títulos das colunas) -->
+
         <tr>
+          <!-- Linha do cabeçalho da tabela -->
+
           <th>Nome</th>
+          <!-- Coluna do nome -->
+
           <th>Status</th>
+          <!-- Coluna do status -->
+
           <th>Localização</th>
+          <!-- Coluna da localização -->
+
           <th>Aquisição</th>
+          <!-- Coluna da data -->
         </tr>
       </thead>
-      <tbody id="tabela"></tbody>
+
+      <tbody id="tabela">
+        <!-- Corpo da tabela — onde os itens serão adicionados pelo JavaScript -->
+      </tbody>
     </table>
   </div>
 
   <script src="script.js"></script>
+  <!-- Importa o arquivo JavaScript que contém a lógica da página -->
 </body>
+
 </html>
