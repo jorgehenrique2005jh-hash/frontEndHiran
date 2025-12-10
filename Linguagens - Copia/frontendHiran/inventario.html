@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventário de Móveis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Cadastro de Inventário de Móveis</h1>
+  <div class="container">
+    <h3>Adicionar Item</h3>
+
+    <input type="text" id="nome" placeholder="Nome do móvel/equipamento" />
+    <input type="text" id="localizacao" placeholder="Localização" />
+
+    <select id="status">
+      <option value="Em uso">Em uso</option>
+      <option value="Estocado">Estocado</option>
+      <option value="Quebrado">Quebrado</option>
+    </select>
+
+    <input type="date" id="data" />
+
+    <button onclick="adicionarItem()">Cadastrar</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Status</th>
+          <th>Localização</th>
+          <th>Aquisição</th>
+        </tr>
+      </thead>
+      <tbody id="tabela"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
